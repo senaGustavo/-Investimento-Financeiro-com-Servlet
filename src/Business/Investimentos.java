@@ -1,12 +1,14 @@
 package Business;
-public abstract class Investimentos implements IInvestimentos {
-    protected float valor1;
-    protected float valor2;
-    protected float resultado;
-    public double getResultado() {
-        return resultado;
-    }
-    public Investimentos(float valor1){
-        this.valor1=valor1;
+public class Investimento {
+    public double calcular(double capital, int meses, String tipo) {
+        double taxa;
+        switch (tipo) {
+            case "Poupanca":  taxa = 0.38; break;
+            case "CDI":       taxa = 0.53; break;
+            case "TesouroDireto": taxa = 0.65; break;
+            default: throw new IllegalArgumentException("Tipo inválido");
+        }
+        
+        return capital * Math.pow(1 + (taxa / 100), meses);
     }
 }
