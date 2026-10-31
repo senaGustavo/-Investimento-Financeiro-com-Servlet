@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Investimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="card">
+
+            <h1>Simulador de Investimentos</h1>
+            <p class="subtitle">
+                Descubra quanto seu dinheiro pode render!
+            </p>
+
+            <form action="ServletInvestimento" method="POST">
+
+                <div class="form-group">
+                    <label for="valor1">Valor inicial (R$)</label>
+                    <input
+                        type="number"
+                        id="valor1"
+                        name="valor1"
+                        placeholder="Ex: 1000"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="meses">Período (meses)</label>
+                    <input
+                        type="number"
+                        id="meses"
+                        name="meses"
+                        placeholder="Ex: 12"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoInvestimento">Tipo de investimento</label>
+
+                    <select id="tipoInvestimento" name="tipoInvestimento" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Poupanca">Poupança</option>
+                        <option value="CDI">CDI</option>
+                        <option value="TesouroDireto">Tesouro Direto</option>
+                    </select>
+                </div>
+
+                <button type="submit">Calcular investimento</button>
+
+            </form>
+
+            <p class="footer">
+                Simulação de rendimento financeiro
+            </p>
+
+        </section>
+    </main>
+
+</body>
+</html>
