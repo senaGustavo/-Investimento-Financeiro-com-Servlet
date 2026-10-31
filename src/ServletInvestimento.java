@@ -32,7 +32,7 @@ public class ServletInvestimento extends HttpServlet {
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<title>Resultado do Investimento</title>");
-        out.println("<link rel='stylesheet' href='style.css'>");
+        out.println("<link rel='stylesheet' href='" + request.getContextPath() + "/style.css'>");
         out.println("</head>");
         out.println("<body>");
         out.println("<main class='container'>");
